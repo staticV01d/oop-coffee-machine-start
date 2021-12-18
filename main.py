@@ -14,7 +14,7 @@ while maker.is_on:
     elif command == "report":
         maker.report()
         register.report()
-    elif menu.find_drink(command) is not None:
+    elif menu.have_item(command):
         drink = menu.find_drink(command)
         if maker.is_resource_sufficient(drink):
             if register.make_payment(drink.cost):
