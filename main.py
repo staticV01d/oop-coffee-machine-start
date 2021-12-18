@@ -3,14 +3,12 @@ from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
 
 maker = CoffeeMaker()
-for i in maker.resources:
-    print(i, " ", maker.resources[i])
 menu = Menu()
 register = MoneyMachine()
 print("Welcome to PyCafe!")
 
 while maker.is_on:
-    command = input("What drink would you like?: ({})".format(menu.get_items())).lower()
+    command = input("What drink would you like?: ({}) ".format(menu.get_items())).lower()
     if command == "off":
         maker.is_on = False
     elif command == "report":
